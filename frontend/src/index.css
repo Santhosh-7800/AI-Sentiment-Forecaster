@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0dccf2;
+  --color-secondary: #7c3aed;
+  --color-background-light: #ffffff;
+  --color-background-dark: #0a1014;
+  --color-surface-light: #f8fafc;
+  --color-surface-dark: #1a2329;
+  --color-text-light: #1e293b;
+  --color-text-dark: #f1f5f9;
+  --color-border-light: #e2e8f0;
+  --color-border-dark: #334155;
+}
+
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Mode (Default) */
+.dark {
+  --bg-primary: var(--color-background-dark);
+  --bg-secondary: var(--color-surface-dark);
+  --text-primary: var(--color-text-dark);
+  --text-secondary: #94a3b8;
+  --border-color: var(--color-border-dark);
+  --overlay: rgba(15, 23, 42, 0.7);
+}
+
+/* Light Mode */
+.light {
+  --bg-primary: var(--color-background-light);
+  --bg-secondary: var(--color-surface-light);
+  --text-primary: var(--color-text-light);
+  --text-secondary: #64748b;
+  --border-color: var(--color-border-light);
+  --overlay: rgba(241, 245, 249, 0.8);
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+#root {
+  width: 100%;
+}
+
+/* Custom scrollbar for dark mode */
+.dark ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #1a2329;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Custom scrollbar for light mode */
+.light ::-webkit-scrollbar {
+  width: 10px;
+}
+
+.light ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.light ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 5px;
+}
+
+.light ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+/* 1. HIDE ALL AVATARS (Clears the giant black circle) */
+.react-chatbot-kit-chat-bot-avatar-container,
+.react-chatbot-kit-user-avatar-container {
+  display: none !important;
+}
+
+/* 2. REMOVE THE DOUBLE HEADER */
+.react-chatbot-kit-chat-header {
+  display: none !important;
+}
+
+.react-chatbot-kit-chat-bot-message-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    padding-bottom: 20px !important;
+}
+
+.react-chatbot-kit-user-chat-message-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+
+/* 4. CLEAN BUBBLE STYLING */
+.react-chatbot-kit-chat-bot-message {
+  background-color: #1e293b !important; /* Slate-800 */
+  color: #f1f5f9 !important;
+  border-radius: 18px 18px 18px 2px !important;
+  padding: 12px 16px !important;
+  font-size: 0.9rem !important;
+  margin-left: 0 !important; /* Important since avatar is gone */
+  max-width: 85% !important;
+}
+
+.react-chatbot-kit-user-chat-message {
+  background-color: #3b82f6 !important; /* Your Primary Blue */
+  color: white !important;
+  border-radius: 18px 18px 2px 18px !important;
+  padding: 12px 16px !important;
+  font-size: 0.9rem !important;
+  max-width: 85% !important;
+}
+
+/* 5. REMOVE ARROW ON BOT BUBBLE */
+.react-chatbot-kit-chat-bot-message-arrow {
+  display: none !important;
+}
+/* --- INPUT AREA TRANSFORMATION --- */
+
+/* 1. The Outer Container */
+.react-chatbot-kit-chat-input-container {
+  background-color: #0f172a !important; /* Matches your dashboard background */
+  padding: 16px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  display: flex !important;
+  align-items: center !important;
+  bottom: 0 !important;
+}
+
+
+.react-chatbot-kit-chat-input-form {
+  display: flex !important;
+  width: 100% !important;
+  align-items: center !important;
+}
+
+
+.react-chatbot-kit-chat-input {
+  width: 100% !important;
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 12px 15px !important;
+  color: #f1f5f9 !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+}
+
+.react-chatbot-kit-chat-input:focus {
+  outline: none !important;
+  border-color: #3b82f6 !important; /* Your primary blue */
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+
+.react-chatbot-kit-chat-btn-send {
+  background-color: #3b82f6 !important;
+  width: 40px !important;
+  height: 40px !important;
+  margin-left: 10px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: transform 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.react-chatbot-kit-chat-btn-send:hover {
+  transform: scale(1.05);
+  background-color: #2563eb !important;
+}
+
+
+.react-chatbot-kit-chat-btn-send-icon {
+  fill: #fff !important;
+  width: 18px !important;
+}

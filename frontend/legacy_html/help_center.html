@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<title>TrendAI Help Center</title>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-6 lg:px-40 py-3 bg-background-light dark:bg-background-dark">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-tight">TrendAI</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="help_center.html">Docs</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="help_center.html">Updates</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium hover:text-primary transition-colors" href="help_center.html">Community</a>
+</nav>
+<div class="flex gap-2">
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="flex cursor-pointer items-center justify-center rounded-lg h-10 w-10 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-white hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex flex-col flex-1 px-4 lg:px-40 py-8">
+<section class="@container mb-12">
+<div class="flex min-h-[400px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 rounded-xl items-center justify-center p-6 relative overflow-hidden" data-alt="Abstract neural network and data flow visualization background" style='background-image: linear-gradient(rgba(16, 31, 34, 0.85) 0%, rgba(16, 31, 34, 0.95) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuASdwxA9V95leAj_GrxaFGuY8EbUFDUTGT327u-3BGl4-v8kESEvwV0zQyt8iw6UeP3I82ITH6kS_H1hIBTAYrbeUl9rGfy8CHgFbrwX5ypA3m6E5qAW9UPi1TaXvXoF2VvGuHw6Zo5haOY95VuJfama0y31R8UdZnhfTWwi0orKvcrTdTZJkurzaOKEEVtfd_mGwe-YYIb9vqmAtyPmYpVIIHAq7Ba7VkMkAZTG9iFE-_8Z-sZ4eccyzWDwfH3IIcvB3XRjDMYpgiP");'>
+<div class="flex flex-col gap-2 text-center z-10">
+<h1 class="text-white text-4xl font-black leading-tight tracking-tight @[480px]:text-5xl">
+                                How can we help you?
+                            </h1>
+<p class="text-slate-300 text-sm font-normal leading-normal @[480px]:text-lg">
+                                Search our documentation or browse topics below
+                            </p>
+</div>
+<label class="flex flex-col min-w-40 h-14 w-full max-w-[600px] @[480px]:h-16 z-10">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full shadow-2xl">
+<div class="text-slate-400 flex border border-slate-700 bg-background-dark items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden text-white focus:outline-0 focus:ring-0 border border-slate-700 bg-background-dark focus:border-primary h-full placeholder:text-slate-500 px-4 text-sm font-normal leading-normal @[480px]:text-base" placeholder="Search for articles, guides, and more..." value=""/>
+<div class="flex items-center justify-center rounded-r-lg border-l-0 border border-slate-700 bg-background-dark pr-2">
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 bg-primary text-background-dark text-sm font-bold hover:opacity-90 transition-opacity">
+<span>Search</span>
+</button>
+</div>
+</div>
+</label>
+</div>
+</section>
+<section class="mb-12">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tight mb-6">Support Topics</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="group flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 hover:border-primary/50 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">rocket_launch</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Getting Started</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">New here? Start with the basic concepts and quick setup guide.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 hover:border-primary/50 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">insights</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Using AI Insights</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Master our predictive analytics and data visualization tools.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 hover:border-primary/50 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">Account &amp; Billing</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Manage your subscriptions, usage limits, and invoices.</p>
+</div>
+</div>
+<div class="group flex flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-6 hover:border-primary/50 transition-all cursor-pointer">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">terminal</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="text-slate-900 dark:text-white text-lg font-bold">API Docs</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">Technical integration guides for TrendAI REST APIs and SDKs.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2">
+<h2 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tight mb-6">Frequently Asked Questions</h2>
+<div class="space-y-4">
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<span class="font-semibold text-slate-900 dark:text-slate-100">How do I connect my data source?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+<div class="px-5 pb-5 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                                    Navigate to 'Settings' &gt; 'Data Connections' and click 'Add Source'. We support AWS S3, Google BigQuery, Snowflake, and local CSV uploads.
+                                </div>
+</div>
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<span class="font-semibold text-slate-900 dark:text-slate-100">What is the data retention policy?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/30 overflow-hidden">
+<button class="w-full flex items-center justify-between p-5 text-left hover:bg-slate-50 dark:hover:bg-slate-800/50 transition-colors">
+<span class="font-semibold text-slate-900 dark:text-slate-100">Can I share reports with external users?</span>
+<span class="material-symbols-outlined text-slate-400">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<div class="rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 border border-primary/20 p-8 flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold">Still need help?</h3>
+<p class="text-slate-600 dark:text-slate-400 text-sm">Our support team is available 24/7 to assist you with any technical issues.</p>
+</div>
+<div class="flex flex-col gap-3">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 px-4 text-background-dark font-bold hover:opacity-90 transition-opacity">
+<span class="material-symbols-outlined">chat</span>
+                                    Start Live Chat
+                                </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 py-3 px-4 text-slate-900 dark:text-white font-bold hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors">
+<span class="material-symbols-outlined">confirmation_number</span>
+                                    Open a Ticket
+                                </button>
+</div>
+<div class="pt-4 border-t border-primary/10 flex items-center gap-3">
+<div class="flex -space-x-2">
+<img alt="Team" class="size-8 rounded-full border-2 border-background-dark" data-alt="Team member profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHQWwPF2UPgE3pNNvZR_KRqL-Z_66tugrZHx3j37_ehu_BvWLdXv637PGOSsScrHC5UDMnpm_nH0UfdS2S07ILv9JtrBJ9qyRKzJ_-6a-es7FTmjuYV1DKJja7M_WGj1iXPBShKRL6ECQ6UQtGKMuNngzqInGZRjkr7X98MP5siRRoqdUS2tg9cMNC8y85u993C1Lt5XPM-wCZirVfeRTK4bmeruMjnktN8xnPb5j0nb11ukPZfoz8ij-yS7B_0v2JyjxM-kMh7sZD"/>
+<img alt="Team" class="size-8 rounded-full border-2 border-background-dark" data-alt="Team member profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHIvd64GSFwrJEk4pN2jWjTrAEpdylfTMeyIdNw40ptefjsTptyu3v-qH6t-7xuln9fIX6ghak9HGOWnHdKuultS8XMV0_qtdoX_m3sRwtbz55Z4jE26MlM6EleaxtWXL1Q_duwXjETXFmviIvF4VCAGsLkwFNj4S17ApbZyrfAm8W17olFt39P752mCc1lL1iMYXicbMcOa2pRPaJ5J6_CoBJn8HjJvn89Rgysp1Gt7QNXGc-Gi6qNIXjlbvX5mzHQL5emtTUVCHt"/>
+<img alt="Team" class="size-8 rounded-full border-2 border-background-dark" data-alt="Team member profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUkVwj1XUCDmjjtW5jB1pVL2gEE1rumq6QJGNk5SNPs12ok2QG3pNdtkuat7cAbE6TbMPQyF4hs99ViIt3IIQ0YnnTtEbhRogXlLI877TIhVUEVdiYPQNjK7zjNY47WPSR8iE8SwoAAvLkUnr5uVWu-7MY9SyXQSGr-9uAjFDml7H2VMePf3YV6U43uu395YT2MraxqCPBt0vcb6Y4e_KZmrFN5L8CBreVL606AL4u5VTTMEpsHoGrAuTrwkK0WnV7CN183MonuLg_"/>
+</div>
+<span class="text-xs text-slate-500 font-medium">Average response: 5 mins</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="mt-auto border-t border-slate-200 dark:border-slate-800 px-6 lg:px-40 py-8 bg-background-light dark:bg-background-dark">
+<div class="flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="flex items-center gap-2">
+<div class="size-5 text-primary/60">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 11.2727C44 14.0109 39.8386 16.3957 33.69 17.6364C39.8386 18.877 44 21.2618 44 24C44 26.7382 39.8386 29.123 33.69 30.3636C39.8386 31.6043 44 33.9891 44 36.7273C44 40.7439 35.0457 44 24 44C12.9543 44 4 40.7439 4 36.7273C4 33.9891 8.16144 31.6043 14.31 30.3636C8.16144 29.123 4 26.7382 4 24C4 21.2618 8.16144 18.877 14.31 17.6364C8.16144 16.3957 4 14.0109 4 11.2727C4 7.25611 12.9543 4 24 4C35.0457 4 44 7.25611 44 11.2727Z"></path>
+</svg>
+</div>
+<span class="text-sm text-slate-500 font-medium">© 2024 TrendAI Inc.</span>
+</div>
+<div class="flex gap-6">
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-slate-500 hover:text-primary transition-colors" href="#">Status</a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,38 @@
+# RAG (Retrieval-Augmented Generation) Requirements
+# Add these to your main requirements.txt
+
+# Core RAG Framework
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-core>=0.3.0
+langchain-openai>=0.2.0
+langchain-huggingface>=0.1.0
+
+# Vector Databases (choose one or use multiple)
+# Option 1: ChromaDB (recommended for local development - free)
+chromadb==0.5.23
+
+# Option 2: Pinecone (cloud-based, requires API key)
+pinecone-client==5.0.1
+
+# Option 3: FAISS (Facebook AI - local, efficient)
+faiss-cpu==1.9.0.post1
+
+# Embeddings & LLMs
+sentence-transformers==3.3.1
+openai>=1.35.0
+tiktoken==0.8.0
+
+# Document Processing
+pypdf==5.1.0
+python-docx==1.1.2
+# unstructured - optional, comment out if install fails
+langchain-text-splitters==0.3.4
+
+# Groq (FREE, fast LLM provider)
+langchain-groq==0.2.1
+
+# Additional utilities
+python-dotenv==1.2.1
+pydantic==2.12.5
+pydantic-settings==2.12.0

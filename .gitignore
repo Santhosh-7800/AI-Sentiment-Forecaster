@@ -1,0 +1,132 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# PyCharm
+.idea/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node.js & React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Vite build output
+frontend/dist/
+frontend/.vite/
+frontend/dist-ssr/
+
+# Frontend cache
+frontend/.cache/
+
+# Logs
+logs/
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Backend output files
+backend/output/*.csv
+backend/output/*.json
+output/*.csv
+output/*.json
+
+# Local vector database artifacts
+backend/data/chromadb/
+data/chromadb/
+
+# Generated pipeline data (processed/enriched/analytics parquets)
+data/processed/
+data/enriched/
+data/analytics/
+*.parquet
+
+# Generated reports
+reports/output/
+
+# Runtime usage state
+backend/data/usage/quota_state.json
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyright
+.pyright/
+
+# Machine Learning Models (if they're large)
+*.pkl
+*.h5
+*.model
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Temporary files
+*.tmp
+temp/
+tmp/

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>TrendAI Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0dccf2",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#101f22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+    <div class="relative flex min-h-screen w-full">
+        <!-- Sidebar -->
+        <aside
+            class="w-64 border-r border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark flex flex-col fixed h-full">
+            <div class="p-6 flex items-center gap-3">
+                <div class="size-8 bg-primary rounded-lg flex items-center justify-center text-background-dark">
+                    <span class="material-symbols-outlined font-bold">query_stats</span>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight">TrendAI</h2>
+            </div>
+            <nav class="flex-1 px-4 space-y-1">
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 text-primary font-medium"
+                    href="user_dashboard.html">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">group</span>
+                    Users
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                    Products
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="#">
+                    <span class="material-symbols-outlined">monitoring</span>
+                    Analytics
+                </a>
+                <a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    href="sentiment_analysis.html">
+                    <span class="material-symbols-outlined">forum</span>
+                    Sentiment
+                </a>
+            </nav>
+            <div class="p-4 border-t border-slate-200 dark:border-slate-800">
+                <a href="index.html"
+                    class="flex items-center gap-3 p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors">
+                    <div class="size-10 rounded-full bg-slate-200 dark:bg-slate-800 overflow-hidden">
+                        <img alt="Admin Profile" data-alt="Headshot of a professional male administrator"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWqGPrKuk62bqWVufMRZKS1_D0J900O3Th4B2VCjhAICBwS6skaGxI2mc7_0j8JgO5EgmMmXh-w7XUUakvZIvpr-nPVv30qdxTn5jYjvk-MWUHEsuec1mxk5Sp1KsAM3ODC6hl7Vk4JoZAZAJqga6oG27B0trVBwuEKwcalNhnPE5Dd2JDusMqVYx36FiCLxObt50bcTdOI0y5AJKfVJFgVtFbejIE0LXJgy1imaDuWGVAT0l1Nhx-DW_Fqd01IwmO5zvmeK8Qj8Xj" />
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <p class="text-sm font-semibold truncate">Alex Chen</p>
+                        <p class="text-xs text-slate-500 truncate">Logout</p>
+                    </div>
+                    <span class="material-symbols-outlined text-slate-400 text-lg">logout</span>
+                </a>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="flex-1 ml-64 p-8">
+            <!-- Header -->
+            <header class="flex items-center justify-between mb-8">
+                <div>
+                    <h1 class="text-3xl font-bold tracking-tight">Platform Overview</h1>
+                    <p class="text-slate-500 dark:text-slate-400">Real-time performance and engagement metrics</p>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+                        <input
+                            class="pl-10 pr-4 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg focus:ring-2 focus:ring-primary/50 focus:border-primary outline-none text-sm w-64 transition-all"
+                            placeholder="Search data..." type="text" />
+                    </div>
+                    <button
+                        class="size-10 flex items-center justify-center rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300">
+                        <span class="material-symbols-outlined">notifications</span>
+                    </button>
+                </div>
+            </header>
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="size-10 bg-green-500/10 text-green-500 rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined">health_and_safety</span>
+                        </div>
+                        <span
+                            class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+0.2%</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">System Uptime</p>
+                    <p class="text-2xl font-bold">99.98%</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="size-10 bg-primary/10 text-primary rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined">person_add</span>
+                        </div>
+                        <span
+                            class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+12.5%</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Active Users</p>
+                    <p class="text-2xl font-bold">42,851</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div
+                            class="size-10 bg-orange-500/10 text-orange-500 rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined">search_insights</span>
+                        </div>
+                        <span
+                            class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+8.1%</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Total Queries</p>
+                    <p class="text-2xl font-bold">1.24M</p>
+                </div>
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-4">
+                        <div
+                            class="size-10 bg-purple-500/10 text-purple-500 rounded-lg flex items-center justify-center">
+                            <span class="material-symbols-outlined">mood</span>
+                        </div>
+                        <span
+                            class="text-xs font-semibold text-green-500 bg-green-500/10 px-2 py-1 rounded-full">+4.2%</span>
+                    </div>
+                    <p class="text-sm font-medium text-slate-500 dark:text-slate-400">Avg. Sentiment</p>
+                    <p class="text-2xl font-bold">Highly Positive</p>
+                </div>
+            </div>
+            <!-- Charts Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
+                <!-- Most Searched Products -->
+                <div
+                    class="lg:col-span-2 bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-lg font-bold">Trending Products</h3>
+                        <button class="text-primary text-sm font-semibold flex items-center gap-1">
+                            View All <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </button>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-slate-500">smartphone</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">NeuralPhone Ultra</span>
+                                    <span class="text-sm text-slate-500">24.5k searches</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full w-[85%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-slate-500">laptop</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">QuantumBook Pro</span>
+                                    <span class="text-sm text-slate-500">18.2k searches</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full w-[65%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div
+                                class="size-12 rounded-lg bg-slate-100 dark:bg-slate-700 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-slate-500">headphones</span>
+                            </div>
+                            <div class="flex-1">
+                                <div class="flex justify-between mb-1">
+                                    <span class="text-sm font-medium">SonicWave X</span>
+                                    <span class="text-sm text-slate-500">12.9k searches</span>
+                                </div>
+                                <div class="w-full bg-slate-100 dark:bg-slate-700 h-2 rounded-full overflow-hidden">
+                                    <div class="bg-primary h-full rounded-full w-[45%]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sentiment Overview -->
+                <div
+                    class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                    <h3 class="text-lg font-bold mb-6">Sentiment Mix</h3>
+                    <div class="flex flex-col items-center justify-center py-4">
+                        <!-- Custom CSS Circle Chart Representation -->
+                        <div class="relative size-40 mb-6">
+                            <svg class="size-full -rotate-90" viewbox="0 0 36 36">
+                                <circle class="stroke-slate-100 dark:stroke-slate-700" cx="18" cy="18" fill="none"
+                                    r="16" stroke-width="4"></circle>
+                                <circle class="stroke-green-500" cx="18" cy="18" fill="none" r="16"
+                                    stroke-dasharray="75, 100" stroke-linecap="round" stroke-width="4"></circle>
+                                <circle class="stroke-orange-500" cx="18" cy="18" fill="none" r="16"
+                                    stroke-dasharray="15, 100" stroke-dashoffset="-75" stroke-linecap="round"
+                                    stroke-width="4"></circle>
+                                <circle class="stroke-red-500" cx="18" cy="18" fill="none" r="16"
+                                    stroke-dasharray="10, 100" stroke-dashoffset="-90" stroke-linecap="round"
+                                    stroke-width="4"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-2xl font-bold">75%</span>
+                                <span
+                                    class="text-[10px] uppercase tracking-wider text-slate-500 font-bold">Positive</span>
+                            </div>
+                        </div>
+                        <div class="w-full space-y-2">
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2">
+                                    <div class="size-2 rounded-full bg-green-500"></div>
+                                    <span class="text-slate-500">Positive</span>
+                                </div>
+                                <span class="font-bold">75%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2">
+                                    <div class="size-2 rounded-full bg-orange-500"></div>
+                                    <span class="text-slate-500">Neutral</span>
+                                </div>
+                                <span class="font-bold">15%</span>
+                            </div>
+                            <div class="flex items-center justify-between text-xs">
+                                <div class="flex items-center gap-2">
+                                    <div class="size-2 rounded-full bg-red-500"></div>
+                                    <span class="text-slate-500">Negative</span>
+                                </div>
+                                <span class="font-bold">10%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- User Management Table -->
+            <div
+                class="bg-white dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm overflow-hidden">
+                <div class="p-6 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                    <div>
+                        <h3 class="text-lg font-bold">Recent Users</h3>
+                        <p class="text-sm text-slate-500">Manage your active platform community</p>
+                    </div>
+                    <button
+                        class="bg-primary text-background-dark px-4 py-2 rounded-lg font-bold text-sm hover:opacity-90 transition-opacity flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">person_add</span>
+                        Invite User
+                    </button>
+                </div>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr
+                                class="text-slate-500 dark:text-slate-400 text-xs font-semibold uppercase tracking-wider bg-slate-50 dark:bg-slate-900/50">
+                                <th class="px-6 py-4">User</th>
+                                <th class="px-6 py-4">Status</th>
+                                <th class="px-6 py-4">Subscription</th>
+                                <th class="px-6 py-4">Last Active</th>
+                                <th class="px-6 py-4 text-right">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200 dark:divide-slate-700">
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xs">
+                                            JD</div>
+                                        <div>
+                                            <p class="text-sm font-semibold">Jane Doe</p>
+                                            <p class="text-xs text-slate-500">jane@example.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-green-500/10 text-green-500">Active</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Enterprise</td>
+                                <td class="px-6 py-4 text-sm text-slate-500">2 mins ago</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-8 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-500 font-bold text-xs">
+                                            MK</div>
+                                        <div>
+                                            <p class="text-sm font-semibold">Marcus Kane</p>
+                                            <p class="text-xs text-slate-500">marcus@studio.io</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-green-500/10 text-green-500">Active</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Pro Plan</td>
+                                <td class="px-6 py-4 text-sm text-slate-500">1 hour ago</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-8 rounded-full bg-orange-500/20 flex items-center justify-center text-orange-500 font-bold text-xs">
+                                            SL</div>
+                                        <div>
+                                            <p class="text-sm font-semibold">Sarah Lee</p>
+                                            <p class="text-xs text-slate-500">sarah.l@gmail.com</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-slate-100 text-slate-500 dark:bg-slate-700 dark:text-slate-400">Offline</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Free Tier</td>
+                                <td class="px-6 py-4 text-sm text-slate-500">3 days ago</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-slate-50 dark:hover:bg-slate-900/50 transition-colors">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center gap-3">
+                                        <div
+                                            class="size-8 rounded-full bg-pink-500/20 flex items-center justify-center text-pink-500 font-bold text-xs">
+                                            BR</div>
+                                        <div>
+                                            <p class="text-sm font-semibold">Ben Rogers</p>
+                                            <p class="text-xs text-slate-500">benny@tech.co</p>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4">
+                                    <span
+                                        class="px-2 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-green-500/10 text-green-500">Active</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">Enterprise</td>
+                                <td class="px-6 py-4 text-sm text-slate-500">Just now</td>
+                                <td class="px-6 py-4 text-right">
+                                    <button class="text-slate-400 hover:text-primary transition-colors">
+                                        <span class="material-symbols-outlined">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="p-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-between">
+                    <p class="text-xs text-slate-500">Showing 4 of 2,841 users</p>
+                    <div class="flex items-center gap-2">
+                        <button class="p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800 disabled:opacity-50"
+                            disabled="">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button class="p-1 rounded hover:bg-slate-100 dark:hover:bg-slate-800">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

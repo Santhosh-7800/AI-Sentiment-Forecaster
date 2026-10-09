@@ -1,0 +1,14 @@
+{
+  "gemini": {
+    "requests_today": 0,
+    "max_daily": 50,
+    "reset_time": "2026-03-19T01:05:08.118066",
+    "exhausted": false
+  },
+  "newsapi": {
+    "requests_today": 0,
+    "max_daily": 100,
+    "reset_time": "2026-03-19T01:05:08.118087",
+    "exhausted": false
+  }
+}
